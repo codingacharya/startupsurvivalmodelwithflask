@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Startup Survival Predictor</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <form action="/predict" method="post">
+        <h2>Startup Survival Predictor</h2>
+        Team Experience (years): <input type="number" name="team_experience_years"><br>
+        Past Successes: <input type="number" name="past_successes"><br>
+        Funding Rounds: <input type="number" name="funding_rounds"><br>
+        Total Funding (M): <input type="number" name="total_funding" step="0.1"><br>
+        Has Top Investor:
+        <select name="has_top_investor">
+            <option value="yes">Yes</option>
+            <option value="no">No</option>
+        </select><br>
+        Debt Ratio: <input type="number" name="debt_ratio" step="0.01"><br>
+        Cash Flow Score: <input type="number" name="cash_flow_score" step="0.01"><br>
+        Industry:
+        <select name="industry">
+            <option value="Fintech">Fintech</option>
+            <option value="Healthtech">Healthtech</option>
+            <option value="Edtech">Edtech</option>
+            <option value="E-commerce">E-commerce</option>
+        </select><br>
+        Regulatory Risk Score: <input type="number" name="regulatory_risk_score" step="0.01"><br>
+        Customer Retention Rate: <input type="number" name="customer_retention_rate" step="0.01"><br>
+        Customer Satisfaction Score: <input type="number" name="customer_satisfaction_score" step="0.1"><br>
+        <input type="submit" value="Predict">
+    </form>
+</body>
+</html>
